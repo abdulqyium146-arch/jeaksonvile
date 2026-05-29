@@ -1,7 +1,7 @@
 import {
   SITE_NAME, SITE_URL, PHONE, PHONE_INTERNATIONAL,
   EMAIL, ADDRESS, GEO, RATING, FOUNDED_YEAR,
-  PRICE_RANGE, SOCIAL, OG_IMAGE,
+  PRICE_RANGE, SOCIAL,
 } from "./constants"
 
 const BASE_ID = SITE_URL
@@ -21,12 +21,48 @@ export function buildLocalBusinessSchema() {
       width: 512,
       height: 512,
     },
-    image: {
-      "@type": "ImageObject",
-      url: OG_IMAGE,
-      width: 1200,
-      height: 630,
-    },
+    image: [
+      {
+        "@type": "ImageObject",
+        "@id": `${BASE_ID}/#hero-image`,
+        url: `${SITE_URL}/og/locksmith-jacksonville-fl.webp`,
+        contentUrl: `${SITE_URL}/og/locksmith-jacksonville-fl.webp`,
+        caption: "Emergency locksmith service in Jacksonville FL — Jax Lock Key & Safe Service",
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${BASE_ID}/#emergency-image`,
+        url: `${SITE_URL}/og/emergency-locksmith-jacksonville.webp`,
+        contentUrl: `${SITE_URL}/og/emergency-locksmith-jacksonville.webp`,
+        caption: "24/7 emergency locksmith Jacksonville FL — car and home lockout service",
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${BASE_ID}/#mobile-service-image`,
+        url: `${SITE_URL}/og/mobile-locksmith-service-jacksonville.webp`,
+        contentUrl: `${SITE_URL}/og/mobile-locksmith-service-jacksonville.webp`,
+        caption: "Mobile locksmith service van covering all of Jacksonville FL",
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${BASE_ID}/#team-image`,
+        url: `${SITE_URL}/og/jax-lock-key-safe-service.webp`,
+        contentUrl: `${SITE_URL}/og/jax-lock-key-safe-service.webp`,
+        caption: "Jax Lock Key & Safe Service — locally owned Jacksonville locksmith team",
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${BASE_ID}/#technician-image`,
+        url: `${SITE_URL}/og/licensed-locksmith-technician-jacksonville.webp`,
+        contentUrl: `${SITE_URL}/og/licensed-locksmith-technician-jacksonville.webp`,
+        caption: "Licensed locksmith technician at work in Jacksonville FL",
+        inLanguage: "en-US",
+      },
+    ],
     telephone: PHONE_INTERNATIONAL,
     email: EMAIL,
     address: {
@@ -256,9 +292,11 @@ export function buildBlogPostingSchema({
     },
     image: {
       "@type": "ImageObject",
-      url: OG_IMAGE,
-      width: 1200,
-      height: 630,
+      "@id": `${BASE_ID}/#hero-image`,
+      url: `${SITE_URL}/og/locksmith-jacksonville-fl.webp`,
+      contentUrl: `${SITE_URL}/og/locksmith-jacksonville-fl.webp`,
+      caption: "Jax Lock Key & Safe Service — Jacksonville FL locksmith",
+      inLanguage: "en-US",
     },
     mainEntityOfPage: { "@id": `${url}/#webpage` },
     keywords: tags.join(", "),

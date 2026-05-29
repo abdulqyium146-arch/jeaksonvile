@@ -1,10 +1,14 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Shield, Clock, Users, MapPin } from "lucide-react"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
 import { AboutPageSchema } from "@/components/seo/schema"
 import { buildMetadata } from "@/lib/metadata"
 import { SITE_URL, SITE_NAME, FOUNDED_YEAR } from "@/lib/constants"
+
+const DARK_BLUR =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxODE4MWIiLz48L3N2Zz4="
 
 export const metadata: Metadata = buildMetadata({
   title: "About Jax Lock Key & Safe Service — Jacksonville's Trusted Locksmith",
@@ -46,6 +50,25 @@ export default function AboutPage() {
         <section className="container mx-auto px-4 py-24 max-w-4xl">
           <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
 
+          {/* ── About hero image ─────────────────────────────────────── */}
+          <div className="relative rounded-2xl overflow-hidden mb-10 aspect-[16/7]">
+            <Image
+              src="/og/jax-lock-key-safe-service.webp"
+              alt={`${SITE_NAME} — Jacksonville's trusted locally owned mobile locksmith team`}
+              fill
+              priority
+              placeholder="blur"
+              blurDataURL={DARK_BLUR}
+              sizes="(max-width: 768px) 100vw, 900px"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+            <div className="absolute bottom-6 left-6">
+              <p className="text-white font-black text-2xl drop-shadow-lg">{SITE_NAME}</p>
+              <p className="text-yellow-400 text-sm font-medium drop-shadow-md">Jacksonville&apos;s Trusted Mobile Locksmith Since {FOUNDED_YEAR}</p>
+            </div>
+          </div>
+
           <h1 className="text-5xl font-black mb-6 text-white">
             About {SITE_NAME}
           </h1>
@@ -69,14 +92,32 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {values.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-                <Icon className="h-7 w-7 text-yellow-400 mb-4" aria-hidden="true" />
-                <h2 className="text-lg font-bold text-white mb-2">{title}</h2>
-                <p className="text-zinc-400 text-sm leading-relaxed">{text}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {values.map(({ icon: Icon, title, text }) => (
+                <div key={title} className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
+                  <Icon className="h-7 w-7 text-yellow-400 mb-4" aria-hidden="true" />
+                  <h2 className="text-lg font-bold text-white mb-2">{title}</h2>
+                  <p className="text-zinc-400 text-sm leading-relaxed">{text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="lg:col-span-2 relative rounded-2xl overflow-hidden min-h-[280px]">
+              <Image
+                src="/og/licensed-locksmith-technician-jacksonville.webp"
+                alt="Licensed Jacksonville locksmith technician using professional tools on a residential lock"
+                fill
+                placeholder="blur"
+                blurDataURL={DARK_BLUR}
+                sizes="(max-width: 1024px) 100vw, 400px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-yellow-400 font-bold text-sm">Florida Licensed &amp; Insured</p>
+                <p className="text-zinc-300 text-xs mt-1">Background-checked technicians — every time</p>
               </div>
-            ))}
+            </div>
           </div>
         </section>
 

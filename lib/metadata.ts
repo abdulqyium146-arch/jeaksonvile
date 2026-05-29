@@ -47,7 +47,7 @@ export function buildMetadata({
           width: 1200,
           height: 630,
           alt: title,
-          type: "image/jpeg",
+          type: ogImage.endsWith(".webp") ? "image/webp" : "image/jpeg",
         },
       ],
       ...(type === "article" && publishedTime

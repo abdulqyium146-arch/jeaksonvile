@@ -30,7 +30,7 @@ export const SOCIAL = {
   yelp: "https://www.yelp.com/biz/jax-lock-key-safe-service-jacksonville",
 }
 
-export const OG_IMAGE = `${SITE_URL}/og/home.jpg`
+export const OG_IMAGE = `${SITE_URL}/og/locksmith-jacksonville-fl.webp`
 
 export const DEFAULT_KEYWORDS = [
   "locksmith Jacksonville FL",
