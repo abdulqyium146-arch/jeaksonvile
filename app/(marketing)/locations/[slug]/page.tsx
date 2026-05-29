@@ -6,7 +6,9 @@ import Breadcrumbs from "@/components/seo/breadcrumbs"
 import ServiceGrid from "@/components/sections/service-grid"
 import QuoteForm from "@/components/forms/quote-form"
 import { locations } from "@/content/locations"
-import { PHONE_HREF, SITE_URL } from "@/lib/constants"
+import { buildMetadata } from "@/lib/metadata"
+import { PHONE_HREF, SITE_URL, SITE_NAME } from "@/lib/constants"
+import { buildLocalBusinessSchema } from "@/lib/schema"
 
 export const revalidate = 86400
 
@@ -22,11 +24,17 @@ export async function generateMetadata({
   const { slug } = await params
   const location = locations.find((l) => l.slug === slug)
   if (!location) return {}
-  return {
-    title: `${location.heading} | Jax Lock Key & Safe Service`,
-    description: location.description,
-    alternates: { canonical: `${SITE_URL}/locations/${slug}` },
-  }
+
+  return buildMetadata({
+    title: `Locksmith in ${location.name} FL | ${SITE_NAME}`,
+    description: `${location.description} Licensed 24/7 mobile locksmith serving ${location.name}. Call (904) 586-2816 for fast emergency response.`,
+    path: `/locations/${slug}`,
+    keywords: [
+      `locksmith ${location.name}`,
+      `emergency locksmith ${location.name}`,
+      `mobile locksmith ${location.name} FL`,
+    ],
+  })
 }
 
 export default async function LocationPage({
@@ -39,84 +47,99 @@ export default async function LocationPage({
   if (!location) notFound()
 
   const locationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Locksmith",
-    name: "Jax Lock Key & Safe Service",
-    telephone: "+1-904-586-2816",
+    ...buildLocalBusinessSchema(),
+    "@id": `${SITE_URL}/locations/${slug}/#localbusiness`,
+    name: `${SITE_NAME} — ${location.name}`,
     areaServed: {
       "@type": "City",
       name: location.name,
       containedInPlace: { "@type": "State", name: "Florida" },
     },
     url: `${SITE_URL}/locations/${slug}`,
+    ...(location.lat && location.lng
+      ? { geo: { "@type": "GeoCoordinates", latitude: location.lat, longitude: location.lng } }
+      : {}),
   }
 
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }}
       />
 
-      <section className="container mx-auto px-4 py-24 max-w-5xl">
-        <Breadcrumbs
-          items={[
-            { name: "Locations", href: "/locations" },
-            { name: location.name, href: `/locations/${slug}` },
-          ]}
-        />
+      <div className="bg-black text-white min-h-screen">
+        <section className="container mx-auto px-4 py-24 max-w-5xl">
+          <Breadcrumbs
+            items={[
+              { name: "Locations", href: "/locations" },
+              { name: location.name, href: `/locations/${slug}` },
+            ]}
+          />
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <div className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-500/10 px-4 py-2 text-yellow-300 text-sm mb-6">
-              <MapPin className="h-4 w-4" /> {location.county}
-            </div>
+          <div className="grid lg:grid-cols-3 gap-12">
+            <article className="lg:col-span-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-yellow-500/10 px-4 py-2 text-yellow-300 text-sm mb-6">
+                <MapPin className="h-4 w-4" aria-hidden="true" />
+                {location.county}
+              </div>
 
-            <h1 className="text-4xl lg:text-5xl font-black mb-6">{location.heading}</h1>
-            <p className="text-xl text-zinc-300 mb-8 leading-relaxed">{location.description}</p>
+              <h1 className="text-4xl lg:text-5xl font-black mb-6 text-white">
+                {location.heading}
+              </h1>
 
-            <div className="prose prose-invert max-w-none text-zinc-300 space-y-4">
-              <p>
-                Jax Lock Key & Safe Service provides 24-hour mobile locksmith service in {location.name}. Our licensed technicians respond quickly to emergencies including car lockouts, home lockouts, rekeying, and safe service throughout this area.
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed speakable">
+                {location.description}
               </p>
-              <p>
-                ZIP codes served: {location.zipCodes.join(", ")}
-              </p>
-              {location.landmarks && location.landmarks.length > 0 && (
+
+              <div className="text-zinc-300 space-y-4 leading-relaxed">
                 <p>
-                  We serve customers near {location.landmarks.join(", ")}, and throughout the surrounding area.
+                  Jax Lock Key & Safe Service provides 24-hour mobile locksmith service throughout {location.name}.
+                  Our licensed technicians respond quickly to emergencies including car lockouts, home lockouts,
+                  rekeying, and safe service.
                 </p>
-              )}
-              <p>
-                Whether you're locked out of your car, need your home rekeyed, or require emergency locksmith assistance, we dispatch quickly to {location.name} and surrounding neighborhoods.
-              </p>
-            </div>
+                <p>
+                  <strong className="text-white">ZIP codes served:</strong> {location.zipCodes.join(", ")}
+                </p>
+                {location.landmarks && location.landmarks.length > 0 && (
+                  <p>
+                    We serve customers near {location.landmarks.join(", ")}, and throughout the surrounding area.
+                  </p>
+                )}
+                <p>
+                  Whether you're locked out of your car, need your home rekeyed after moving,
+                  or require emergency locksmith assistance, we dispatch quickly to {location.name} and surrounding neighborhoods.
+                  Most calls receive a 20–30 minute arrival.
+                </p>
+              </div>
 
-            <a
-              href={PHONE_HREF}
-              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover:scale-105 transition-transform"
-            >
-              <PhoneCall className="h-5 w-5" />
-              Call for Service in {location.name}
-            </a>
+              <a
+                href={PHONE_HREF}
+                className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover:scale-105 transition-transform"
+                aria-label={`Call for locksmith service in ${location.name}`}
+              >
+                <PhoneCall className="h-5 w-5" aria-hidden="true" />
+                Call for Service in {location.name}
+              </a>
+            </article>
+
+            <aside aria-label="Quick quote">
+              <QuoteForm />
+            </aside>
           </div>
+        </section>
 
-          <aside>
-            <QuoteForm />
-          </aside>
-        </div>
-      </section>
+        <section aria-labelledby="services-heading" className="py-4">
+          <div className="container mx-auto px-4">
+            <h2 id="services-heading" className="text-3xl font-black text-white mb-8 text-center">
+              Services Available in {location.name}
+            </h2>
+          </div>
+          <ServiceGrid />
+        </section>
 
-      <div className="py-4">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-black text-white mb-8 text-center">
-            Available Services in {location.name}
-          </h2>
-        </div>
-        <ServiceGrid />
+        <EmergencyCTA />
       </div>
-
-      <EmergencyCTA />
     </main>
   )
 }

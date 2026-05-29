@@ -2,32 +2,57 @@ import type { Metadata } from "next"
 import ServiceCard from "@/components/cards/service-card"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
+import { ServicesListSchema } from "@/components/seo/schema"
 import { services } from "@/content/services"
 import { buildMetadata } from "@/lib/metadata"
+import { SITE_URL } from "@/lib/constants"
 
 export const metadata: Metadata = buildMetadata({
-  title: "Locksmith Services in Jacksonville FL — All Services",
+  title: "Locksmith Services Jacksonville FL — Emergency, Residential & Commercial",
   description:
-    "Full list of locksmith services by Jax Lock Key & Safe Service: emergency lockouts, car lockouts, rekeying, safes, commercial locksmith, and more in Jacksonville.",
+    "Complete locksmith services in Jacksonville, FL: emergency lockouts, car lockouts, rekeying, safe opening, key fob programming, commercial locks. Available 24/7. Call (904) 586-2816.",
   path: "/services",
+  keywords: [
+    "locksmith services Jacksonville",
+    "emergency locksmith Jacksonville FL",
+    "residential locksmith Jacksonville",
+    "commercial locksmith Jacksonville",
+  ],
 })
 
 export default function ServicesPage() {
+  const schemaItems = services.map((s) => ({
+    name: s.title,
+    url: `${SITE_URL}/services/${s.slug}`,
+    description: s.description,
+  }))
+
   return (
-    <main className="bg-black text-white min-h-screen">
-      <section className="container mx-auto px-4 py-24">
-        <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
-        <h1 className="text-5xl font-black mb-4">Locksmith Services in Jacksonville</h1>
-        <p className="text-zinc-400 text-xl max-w-2xl mb-12">
-          Jax Lock Key & Safe Service provides a full range of mobile locksmith services across Jacksonville, FL — available 24 hours a day.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
-          ))}
-        </div>
-      </section>
-      <EmergencyCTA />
+    <main>
+      <ServicesListSchema items={schemaItems} />
+
+      <div className="bg-black text-white min-h-screen">
+        <section className="container mx-auto px-4 py-24">
+          <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
+
+          <header className="mb-12">
+            <h1 className="text-5xl font-black text-white mb-4">
+              Locksmith Services in Jacksonville, FL
+            </h1>
+            <p className="text-zinc-400 text-xl max-w-2xl">
+              Jax Lock Key & Safe Service provides a full range of mobile locksmith services across Jacksonville — available 24 hours a day, 7 days a week.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+        </section>
+
+        <EmergencyCTA />
+      </div>
     </main>
   )
 }
