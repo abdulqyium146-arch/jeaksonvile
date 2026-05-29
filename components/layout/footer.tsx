@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { PhoneCall, Mail, MapPin } from "lucide-react"
 import { PHONE, PHONE_HREF, EMAIL, ADDRESS, SITE_NAME } from "@/lib/constants"
 
@@ -25,7 +26,15 @@ export default function Footer() {
     <footer className="bg-zinc-950 border-t border-white/10 text-zinc-400">
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <p className="text-yellow-400 font-black text-xl mb-3">JAX Lock Key</p>
+          <Link href="/" className="inline-block mb-4">
+            <Image
+              src="/logo.webp"
+              alt={`${SITE_NAME} — Jacksonville Locksmith`}
+              width={140}
+              height={42}
+              className="h-10 w-auto brightness-90 hover:brightness-100 transition-all"
+            />
+          </Link>
           <p className="text-sm leading-relaxed mb-4">
             {SITE_NAME} — Licensed mobile locksmith serving all of Jacksonville, FL and surrounding areas 24/7.
           </p>
