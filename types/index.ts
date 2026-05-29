@@ -6,6 +6,8 @@ export interface Service {
   content: string
   icon?: string
   keywords?: string[]
+  relatedServices?: string[]
+  relatedPosts?: string[]
 }
 
 export interface Location {
@@ -18,6 +20,8 @@ export interface Location {
   landmarks?: string[]
   lat?: number
   lng?: number
+  nearbyAreas?: string[]
+  relatedPosts?: string[]
 }
 
 export interface FAQ {
@@ -32,6 +36,8 @@ export interface BlogPost {
   date: string
   content: string
   tags: string[]
+  relatedServices?: string[]
+  relatedPosts?: string[]
 }
 
 export interface Testimonial {

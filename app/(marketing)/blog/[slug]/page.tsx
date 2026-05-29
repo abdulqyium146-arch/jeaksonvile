@@ -3,10 +3,13 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
 import EmergencyCTA from "@/components/sections/emergency-cta"
+import RelatedServicesStrip from "@/components/internal/related-services-strip"
+import RelatedPostsStrip from "@/components/internal/related-posts-strip"
+import LocationLinks from "@/components/internal/location-links"
 import { BlogPostSchema } from "@/components/seo/schema"
 import { blogPosts } from "@/content/blog"
 import { buildMetadata } from "@/lib/metadata"
-import { SITE_URL, SITE_NAME } from "@/lib/constants"
+import { SITE_NAME } from "@/lib/constants"
 
 export const revalidate = 604800
 
@@ -145,6 +148,27 @@ export default async function BlogPostPage({
             </Link>
           </footer>
         </article>
+
+        {/* ── Internal linking: related services ── */}
+        {post.relatedServices && post.relatedServices.length > 0 && (
+          <RelatedServicesStrip
+            heading="Related Locksmith Services in Jacksonville"
+            slugs={post.relatedServices}
+          />
+        )}
+
+        {/* ── Internal linking: other articles ── */}
+        <RelatedPostsStrip
+          heading="More Articles"
+          slugs={post.relatedPosts}
+          exclude={slug}
+        />
+
+        {/* ── Internal linking: all service areas ── */}
+        <LocationLinks
+          heading="Jacksonville Locksmith Near You"
+          subheading="We cover every Jacksonville neighborhood and surrounding area — call us no matter where you are."
+        />
 
         <EmergencyCTA />
       </div>

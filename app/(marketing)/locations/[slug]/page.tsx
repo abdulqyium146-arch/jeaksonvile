@@ -1,9 +1,12 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import Link from "next/link"
 import { MapPin, PhoneCall } from "lucide-react"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
 import ServiceGrid from "@/components/sections/service-grid"
+import LocationLinks from "@/components/internal/location-links"
+import RelatedPostsStrip from "@/components/internal/related-posts-strip"
 import QuoteForm from "@/components/forms/quote-form"
 import { locations } from "@/content/locations"
 import { buildMetadata } from "@/lib/metadata"
@@ -93,29 +96,63 @@ export default async function LocationPage({
               </p>
 
               <div className="text-zinc-300 space-y-4 leading-relaxed">
+                {/* Contextual internal links to service pages within body copy */}
                 <p>
-                  Jax Lock Key & Safe Service provides 24-hour mobile locksmith service throughout {location.name}.
-                  Our licensed technicians respond quickly to emergencies including car lockouts, home lockouts,
-                  rekeying, and safe service.
+                  Jax Lock Key &amp; Safe Service provides 24-hour mobile locksmith service throughout {location.name}.
+                  Our licensed technicians respond quickly to{" "}
+                  <Link href="/services/car-lockout" className="text-yellow-400 hover:underline font-medium">
+                    car lockouts
+                  </Link>
+                  ,{" "}
+                  <Link href="/services/house-lockout" className="text-yellow-400 hover:underline font-medium">
+                    home lockouts
+                  </Link>
+                  ,{" "}
+                  <Link href="/services/rekeying-service" className="text-yellow-400 hover:underline font-medium">
+                    lock rekeying
+                  </Link>
+                  ,{" "}
+                  <Link href="/services/safe-locksmith" className="text-yellow-400 hover:underline font-medium">
+                    safe opening
+                  </Link>
+                  , and{" "}
+                  <Link href="/services/emergency-locksmith" className="text-yellow-400 hover:underline font-medium">
+                    emergency locksmith service
+                  </Link>
+                  .
                 </p>
+
                 <p>
                   <strong className="text-white">ZIP codes served:</strong> {location.zipCodes.join(", ")}
                 </p>
+
                 {location.landmarks && location.landmarks.length > 0 && (
                   <p>
                     We serve customers near {location.landmarks.join(", ")}, and throughout the surrounding area.
                   </p>
                 )}
+
                 <p>
-                  Whether you're locked out of your car, need your home rekeyed after moving,
-                  or require emergency locksmith assistance, we dispatch quickly to {location.name} and surrounding neighborhoods.
+                  Whether you need a{" "}
+                  <Link href="/services/key-fob-programming" className="text-yellow-400 hover:underline font-medium">
+                    car key fob programmed
+                  </Link>
+                  , a{" "}
+                  <Link href="/services/lock-installation" className="text-yellow-400 hover:underline font-medium">
+                    new deadbolt installed
+                  </Link>
+                  , or{" "}
+                  <Link href="/services/commercial-locksmith" className="text-yellow-400 hover:underline font-medium">
+                    commercial locksmith services
+                  </Link>
+                  , we dispatch quickly to {location.name} and surrounding neighborhoods.
                   Most calls receive a 20–30 minute arrival.
                 </p>
               </div>
 
               <a
                 href={PHONE_HREF}
-                className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover:scale-105 transition-transform"
+                className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover-scale"
                 aria-label={`Call for locksmith service in ${location.name}`}
               >
                 <PhoneCall className="h-5 w-5" aria-hidden="true" />
@@ -129,6 +166,7 @@ export default async function LocationPage({
           </div>
         </section>
 
+        {/* ── All services in this location ── */}
         <section aria-labelledby="services-heading" className="py-4">
           <div className="container mx-auto px-4">
             <h2 id="services-heading" className="text-3xl font-black text-white mb-8 text-center">
@@ -137,6 +175,24 @@ export default async function LocationPage({
           </div>
           <ServiceGrid />
         </section>
+
+        {/* ── Nearby service areas ── */}
+        {location.nearbyAreas && location.nearbyAreas.length > 0 && (
+          <LocationLinks
+            heading="Nearby Service Areas"
+            subheading={`We also serve the communities surrounding ${location.name} with the same fast response.`}
+            highlight={location.nearbyAreas}
+            exclude={slug}
+          />
+        )}
+
+        {/* ── Related blog posts ── */}
+        {location.relatedPosts && location.relatedPosts.length > 0 && (
+          <RelatedPostsStrip
+            heading="Locksmith Tips for Jacksonville Residents"
+            slugs={location.relatedPosts}
+          />
+        )}
 
         <EmergencyCTA />
       </div>

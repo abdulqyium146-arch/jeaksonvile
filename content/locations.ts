@@ -12,6 +12,8 @@ export const locations: Location[] = [
     landmarks: ["EverBank Stadium", "Jacksonville Landing", "Duval County Courthouse", "Main Street Bridge"],
     lat: 30.3322,
     lng: -81.6557,
+    nearbyAreas: ["san-marco", "riverside", "arlington"],
+    relatedPosts: ["how-fast-can-emergency-locksmiths-arrive", "what-to-do-when-locked-out-of-car-jacksonville"],
   },
   {
     slug: "san-marco",
@@ -24,6 +26,8 @@ export const locations: Location[] = [
     landmarks: ["San Marco Square", "Memorial Park", "Hendricks Avenue"],
     lat: 30.3067,
     lng: -81.6533,
+    nearbyAreas: ["downtown-jacksonville", "riverside", "southside"],
+    relatedPosts: ["how-much-does-rekeying-cost", "should-you-rekey-or-replace-locks"],
   },
   {
     slug: "southside",
@@ -36,6 +40,8 @@ export const locations: Location[] = [
     landmarks: ["St. Johns Town Center", "Baymeadows Road", "I-95 Southside"],
     lat: 30.2370,
     lng: -81.5993,
+    nearbyAreas: ["san-marco", "mandarin", "arlington"],
+    relatedPosts: ["should-you-rekey-or-replace-locks", "best-smart-locks-for-florida-homes"],
   },
   {
     slug: "arlington",
@@ -48,6 +54,8 @@ export const locations: Location[] = [
     landmarks: ["Regency Square", "Fort Caroline Road", "Arlington Expressway"],
     lat: 30.3458,
     lng: -81.5692,
+    nearbyAreas: ["downtown-jacksonville", "southside", "neptune-beach"],
+    relatedPosts: ["how-fast-can-emergency-locksmiths-arrive", "what-to-do-when-locked-out-of-car-jacksonville"],
   },
   {
     slug: "riverside",
@@ -60,6 +68,8 @@ export const locations: Location[] = [
     landmarks: ["Five Points", "Cummer Museum", "Riverside Arts Market"],
     lat: 30.3192,
     lng: -81.6751,
+    nearbyAreas: ["downtown-jacksonville", "san-marco"],
+    relatedPosts: ["how-much-does-rekeying-cost", "should-you-rekey-or-replace-locks"],
   },
   {
     slug: "mandarin",
@@ -72,6 +82,8 @@ export const locations: Location[] = [
     landmarks: ["Mandarin Road", "Julington Creek", "Walter Jones Historical Park"],
     lat: 30.1728,
     lng: -81.5982,
+    nearbyAreas: ["southside", "orange-park"],
+    relatedPosts: ["how-much-does-rekeying-cost", "best-smart-locks-for-florida-homes"],
   },
   {
     slug: "neptune-beach",
@@ -84,6 +96,8 @@ export const locations: Location[] = [
     landmarks: ["Neptune Beach Town Center", "Atlantic Boulevard", "Beach Boulevard"],
     lat: 30.3124,
     lng: -81.3924,
+    nearbyAreas: ["arlington", "downtown-jacksonville"],
+    relatedPosts: ["how-fast-can-emergency-locksmiths-arrive", "what-to-do-when-locked-out-of-car-jacksonville"],
   },
   {
     slug: "orange-park",
@@ -96,5 +110,7 @@ export const locations: Location[] = [
     landmarks: ["Orange Park Mall", "Blanding Boulevard", "I-295"],
     lat: 30.1652,
     lng: -81.7076,
+    nearbyAreas: ["mandarin", "southside"],
+    relatedPosts: ["how-much-does-rekeying-cost", "should-you-rekey-or-replace-locks"],
   },
 ]

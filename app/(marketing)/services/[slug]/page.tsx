@@ -4,10 +4,13 @@ import { PhoneCall } from "lucide-react"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
 import QuoteForm from "@/components/forms/quote-form"
+import LocationLinks from "@/components/internal/location-links"
+import RelatedServicesStrip from "@/components/internal/related-services-strip"
+import RelatedPostsStrip from "@/components/internal/related-posts-strip"
 import { ServicePageSchema } from "@/components/seo/schema"
 import { services } from "@/content/services"
 import { buildMetadata } from "@/lib/metadata"
-import { PHONE_HREF, SITE_URL, SITE_NAME } from "@/lib/constants"
+import { PHONE_HREF, SITE_NAME } from "@/lib/constants"
 
 export const revalidate = 86400
 
@@ -91,7 +94,7 @@ export default async function ServicePage({
 
               <a
                 href={PHONE_HREF}
-                className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover:scale-105 transition-transform"
+                className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-yellow-400 text-black font-bold px-8 py-4 hover-scale"
                 aria-label={`Call for ${service.title} service`}
               >
                 <PhoneCall className="h-5 w-5" aria-hidden="true" />
@@ -111,6 +114,28 @@ export default async function ServicePage({
             </aside>
           </div>
         </section>
+
+        {/* ── Internal linking: all service areas ── */}
+        <LocationLinks
+          heading={`${service.title} Across All of Jacksonville`}
+          subheading="We dispatch mobile locksmiths to every Jacksonville neighborhood and surrounding area — same fast response everywhere."
+        />
+
+        {/* ── Internal linking: related services ── */}
+        {service.relatedServices && service.relatedServices.length > 0 && (
+          <RelatedServicesStrip
+            heading="Related Services"
+            slugs={service.relatedServices}
+          />
+        )}
+
+        {/* ── Internal linking: related blog posts ── */}
+        {service.relatedPosts && service.relatedPosts.length > 0 && (
+          <RelatedPostsStrip
+            heading="Helpful Resources"
+            slugs={service.relatedPosts}
+          />
+        )}
 
         <EmergencyCTA />
       </div>

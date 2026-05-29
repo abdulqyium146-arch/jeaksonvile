@@ -8,6 +8,8 @@ export const services: Service[] = [
     description:
       "Fast mobile emergency locksmith service for lockouts, broken keys, lock repairs, and urgent access issues across Jacksonville, FL.",
     keywords: ["emergency locksmith Jacksonville", "24 hour locksmith", "lockout service"],
+    relatedServices: ["car-lockout", "house-lockout", "rekeying-service", "safe-locksmith"],
+    relatedPosts: ["how-fast-can-emergency-locksmiths-arrive", "what-to-do-when-locked-out-of-car-jacksonville"],
     content: `If you are locked out of your car, home, office, or business, Jax Lock Key & Safe Service provides rapid emergency locksmith assistance throughout Jacksonville.
 
 Our mobile locksmith team handles:
@@ -30,6 +32,8 @@ Jax Lock Key & Safe Service is a local Jacksonville locksmith company with licen
     description:
       "Locked out of your car in Jacksonville? Our mobile locksmith opens your vehicle quickly without damage. Available 24/7 across Jacksonville.",
     keywords: ["car lockout Jacksonville", "unlock car Jacksonville", "auto locksmith"],
+    relatedServices: ["emergency-locksmith", "key-fob-programming", "house-lockout"],
+    relatedPosts: ["what-to-do-when-locked-out-of-car-jacksonville", "can-locksmiths-program-key-fobs", "how-fast-can-emergency-locksmiths-arrive"],
     content: `Being locked out of your car is stressful, but Jax Lock Key & Safe Service makes it simple. Our mobile auto locksmiths serve all of Jacksonville and can reach you quickly wherever you are — on the road, in a parking lot, or at home.
 
 We service all vehicle makes and models including:
@@ -54,6 +58,8 @@ We do not drill or damage your vehicle unless absolutely necessary. Our goal is 
     description:
       "Jax Lock Key & Safe Service provides fast house lockout service in Jacksonville, FL. Licensed locksmiths open your door without damage.",
     keywords: ["house lockout Jacksonville", "home lockout", "residential locksmith Jacksonville"],
+    relatedServices: ["emergency-locksmith", "rekeying-service", "lock-installation"],
+    relatedPosts: ["should-you-rekey-or-replace-locks", "how-fast-can-emergency-locksmiths-arrive"],
     content: `Getting locked out of your home can happen to anyone. Whether you lost your keys, broke a key off in the lock, or your lock is malfunctioning, Jax Lock Key & Safe Service is ready to help.
 
 Our residential locksmith team serves Jacksonville homes including houses, apartments, condos, and townhomes.
@@ -74,6 +80,8 @@ We respond quickly across all Jacksonville neighborhoods including San Marco, Ri
     description:
       "Rekey your home or business locks in Jacksonville without replacing the hardware. Affordable mobile rekeying service available 24/7.",
     keywords: ["rekey locks Jacksonville", "rekeying service", "change locks Jacksonville"],
+    relatedServices: ["house-lockout", "lock-installation", "commercial-locksmith"],
+    relatedPosts: ["how-much-does-rekeying-cost", "should-you-rekey-or-replace-locks"],
     content: `Rekeying is one of the most cost-effective ways to improve your home security in Jacksonville. When you rekey a lock, a locksmith changes the internal pin configuration so that old keys no longer work — only new keys do.
 
 When should you rekey your locks?
@@ -94,6 +102,8 @@ Jax Lock Key & Safe Service can rekey all standard residential and commercial lo
     description:
       "Lost your safe combination or locked out of your safe in Jacksonville? Jax Lock Key & Safe Service opens, repairs, and relocates safes.",
     keywords: ["safe locksmith Jacksonville", "open safe Jacksonville", "safe combination"],
+    relatedServices: ["emergency-locksmith", "commercial-locksmith", "lock-installation"],
+    relatedPosts: ["how-fast-can-emergency-locksmiths-arrive"],
     content: `Whether you have forgotten your safe combination, lost the key, or your safe is malfunctioning, Jax Lock Key & Safe Service provides professional safe locksmith services throughout Jacksonville.
 
 Types of safes we work with:
@@ -121,6 +131,8 @@ We also offer:
     description:
       "Professional commercial locksmith in Jacksonville for office lockouts, master key systems, access control, and high-security lock installation.",
     keywords: ["commercial locksmith Jacksonville", "office lockout", "master key system"],
+    relatedServices: ["rekeying-service", "lock-installation", "safe-locksmith"],
+    relatedPosts: ["should-you-rekey-or-replace-locks", "best-smart-locks-for-florida-homes"],
     content: `Jax Lock Key & Safe Service provides comprehensive commercial locksmith services for Jacksonville businesses of all sizes, from small offices to large commercial properties.
 
 Commercial locksmith services include:
@@ -145,6 +157,8 @@ Serving all Jacksonville commercial areas including Downtown, Southside Business
     description:
       "Lost your key fob in Jacksonville? Jax Lock Key & Safe Service programs replacement key fobs for most vehicle makes at a fraction of dealer cost.",
     keywords: ["key fob programming Jacksonville", "car key replacement", "transponder key"],
+    relatedServices: ["car-lockout", "emergency-locksmith"],
+    relatedPosts: ["can-locksmiths-program-key-fobs", "what-to-do-when-locked-out-of-car-jacksonville"],
     content: `Losing or breaking your key fob can leave you without remote access to your vehicle. Jax Lock Key & Safe Service provides mobile key fob programming and replacement in Jacksonville for most vehicle makes and models.
 
 Services include:
@@ -166,6 +180,8 @@ We service most domestic and import vehicle brands. Call us with your vehicle ye
     description:
       "Upgrade or replace your home or business locks in Jacksonville. Jax Lock Key & Safe Service installs deadbolts, smart locks, and high-security hardware.",
     keywords: ["lock installation Jacksonville", "deadbolt installation", "smart lock installation"],
+    relatedServices: ["rekeying-service", "commercial-locksmith", "house-lockout"],
+    relatedPosts: ["should-you-rekey-or-replace-locks", "best-smart-locks-for-florida-homes"],
     content: `Whether you want to upgrade your home security with better locks or replace worn or damaged hardware, Jax Lock Key & Safe Service provides professional lock installation throughout Jacksonville.
 
 Lock types we install:
