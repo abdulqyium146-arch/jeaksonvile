@@ -1,7 +1,4 @@
-"use client"
-
 import Image from "next/image"
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { PhoneCall, Shield, Clock, Truck, CheckCircle } from "lucide-react"
 import { PHONE, PHONE_HREF, RATING } from "@/lib/constants"
@@ -18,38 +15,34 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="relative py-28 lg:py-36 overflow-hidden bg-gradient-to-b from-black to-zinc-900">
-      <div className="absolute inset-0 bg-grid bg-[size:30px_30px] opacity-10" />
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-black to-zinc-900">
+      <div className="absolute inset-0 bg-grid bg-[size:30px_30px] opacity-10" aria-hidden="true" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
 
-          {/* ── Text column ─────────────────────────────────────────────── */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="inline-flex items-center rounded-full border border-yellow-400/30 bg-yellow-500/10 px-4 py-2 text-yellow-300 text-sm font-medium mb-6">
+          {/* ── Text column — always visible, no animation delay = best LCP ── */}
+          <div>
+            <div className="inline-flex items-center rounded-full border border-yellow-400/30 bg-yellow-500/10 px-4 py-2 text-yellow-300 text-sm font-medium mb-5">
               24/7 Emergency Locksmith Service in Jacksonville, FL
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-black leading-tight tracking-tight text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
               Locked Out?
               <span className="block text-yellow-400">
                 Fast Jacksonville Locksmith
               </span>
             </h1>
 
-            <p className="mt-6 text-xl text-zinc-300 max-w-xl leading-relaxed">
-              Jax Lock Key & Safe Service provides rapid emergency locksmith solutions across Jacksonville.
+            <p className="mt-5 text-lg sm:text-xl text-zinc-300 max-w-xl leading-relaxed">
+              Jax Lock Key &amp; Safe Service provides rapid emergency locksmith solutions across Jacksonville.
               Car lockouts, home lockouts, rekeying, safes, key extraction — available 24 hours a day.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <a
                 href={PHONE_HREF}
-                className="inline-flex items-center justify-center rounded-2xl bg-yellow-400 px-8 py-5 text-black font-bold text-lg hover:scale-105 transition-transform shadow-glow"
+                className="inline-flex items-center justify-center rounded-2xl bg-yellow-400 px-7 py-4 sm:py-5 text-black font-black text-lg hover-scale shadow-glow"
               >
                 <PhoneCall className="mr-2 h-5 w-5" aria-hidden="true" />
                 Call Now: {PHONE}
@@ -57,32 +50,27 @@ export default function Hero() {
 
               <Link
                 href="/services/emergency-locksmith"
-                className="inline-flex items-center justify-center rounded-2xl border border-white/20 px-8 py-5 font-semibold text-white hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/20 px-7 py-4 sm:py-5 font-semibold text-white hover:bg-white/10 transition-colors"
               >
                 Get Emergency Help
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
               {badges.map(({ icon: Icon, text }) => (
                 <div
                   key={text}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center"
+                  className="rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4 text-center"
                 >
-                  <Icon className="h-5 w-5 text-yellow-400 mx-auto mb-2" aria-hidden="true" />
-                  <p className="font-semibold text-sm text-white">{text}</p>
+                  <Icon className="h-5 w-5 text-yellow-400 mx-auto mb-1.5" aria-hidden="true" />
+                  <p className="font-semibold text-xs sm:text-sm text-white">{text}</p>
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* ── Hero image (desktop only) ────────────────────────────────── */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="hidden lg:flex flex-col gap-4"
-          >
+          {/* ── Hero image (desktop only) — CSS animation, zero JS cost ── */}
+          <div className="hidden lg:flex flex-col gap-4 animate-hero-image">
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <div className="absolute top-0 inset-x-0 h-1 bg-yellow-400 z-10" aria-hidden="true" />
               <Image
@@ -112,7 +100,7 @@ export default function Hero() {
                 <p className="text-zinc-400 text-xs mt-0.5">Available</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

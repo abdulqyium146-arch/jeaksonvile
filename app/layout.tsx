@@ -122,15 +122,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Google Maps preconnect for the embedded map */}
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body className="font-sans bg-black text-white min-h-full flex flex-col">
         <EmergencyRibbon />
         <Navbar />
-        <div className="flex-1">{children}</div>
+        {/* pb-sticky adds clearance for the mobile fixed call bar */}
+        <div className="flex-1 pb-sticky md:pb-0">{children}</div>
         <Footer />
         <StickyCall />
         <FloatingCall />

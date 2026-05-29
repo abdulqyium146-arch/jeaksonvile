@@ -70,7 +70,7 @@ export default function ServiceGrid() {
             <Link
               key={slug}
               href={`/services/${slug}`}
-              className="group rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-yellow-400/50 hover:bg-zinc-800 transition-all"
+              className="group rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-yellow-400/50 hover:bg-zinc-800 transition-colors"
             >
               <Icon className="h-8 w-8 text-yellow-400 mb-4" />
               <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">

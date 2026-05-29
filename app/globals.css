@@ -91,6 +91,11 @@
   }
 }
 
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 @layer utilities {
   .bg-grid {
     background-image: radial-gradient(circle at center, rgba(255,255,255,0.06) 1px, transparent 1px);
@@ -98,4 +103,29 @@
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
+  /* Hero image entrance — CSS only, zero JS cost */
+  .animate-hero-image {
+    animation: heroFadeRight 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  }
+  /* GPU-accelerated hover targets */
+  .hover-scale {
+    will-change: transform;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .hover-scale:hover { transform: scale(1.04); }
+  /* Mobile sticky bar clearance */
+  .pb-sticky { padding-bottom: 5rem; }
+}
+
+/* Respect user motion preference — disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-hero-image { animation: none; opacity: 1; }
 }
