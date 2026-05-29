@@ -42,4 +42,7 @@ export const DEFAULT_KEYWORDS = [
   "car lockout Jacksonville",
   "house lockout Jacksonville",
   "rekeying Jacksonville",
+  "jacksonville residential locksmith services",
+  "residential locksmith services jacksonville",
+  "residential locksmith Jacksonville FL",
 ]

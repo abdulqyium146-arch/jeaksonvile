@@ -34,7 +34,7 @@ A locksmith will typically arrive within 20–30 minutes in Jacksonville. They'l
       "Curious about rekeying prices in Jacksonville? Learn what affects the cost and when rekeying makes more sense than replacing your locks.",
     date: "2024-10-22",
     tags: ["rekeying", "cost", "home security"],
-    relatedServices: ["rekeying-service", "lock-installation", "house-lockout"],
+    relatedServices: ["residential-locksmith", "rekeying-service", "lock-installation", "house-lockout"],
     relatedPosts: ["should-you-rekey-or-replace-locks"],
     content: `Rekeying is one of the most affordable ways to improve your home security in Jacksonville, FL.
 
@@ -60,7 +60,7 @@ If your locks are in good condition, rekeying saves significant money. Lock repl
       "Deciding between rekeying and replacing your locks? Learn which option makes sense for your home security needs in Jacksonville.",
     date: "2024-09-10",
     tags: ["rekeying", "lock replacement", "home security"],
-    relatedServices: ["rekeying-service", "lock-installation"],
+    relatedServices: ["residential-locksmith", "rekeying-service", "lock-installation"],
     relatedPosts: ["how-much-does-rekeying-cost", "best-smart-locks-for-florida-homes"],
     content: `When you move into a new home or lose your keys, you face a choice: rekey your existing locks or replace them entirely.
 
@@ -110,7 +110,7 @@ Call Jax Lock Key & Safe Service with your vehicle year, make, and model for a q
       "Florida heat and humidity can affect smart locks. Here are the top-rated smart locks that hold up in Jacksonville's climate.",
     date: "2024-07-20",
     tags: ["smart locks", "home security", "Florida"],
-    relatedServices: ["lock-installation", "commercial-locksmith", "rekeying-service"],
+    relatedServices: ["residential-locksmith", "lock-installation", "commercial-locksmith", "rekeying-service"],
     relatedPosts: ["should-you-rekey-or-replace-locks"],
     content: `Smart locks add convenience and security to Jacksonville homes, but Florida's heat and humidity mean not every model holds up well.
 

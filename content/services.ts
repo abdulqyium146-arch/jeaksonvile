@@ -2,6 +2,76 @@ import type { Service } from "@/types"
 
 export const services: Service[] = [
   {
+    slug: "residential-locksmith",
+    title: "Residential Locksmith Services",
+    heading: "Jacksonville Residential Locksmith Services — Licensed & Mobile",
+    description:
+      "Professional residential locksmith services in Jacksonville, FL. Home lockouts, rekeying, lock installation, and 24/7 emergency response for houses, apartments, and condos.",
+    keywords: [
+      "jacksonville residential locksmith services",
+      "residential locksmith services jacksonville",
+      "residential locksmith Jacksonville FL",
+      "home locksmith Jacksonville",
+      "residential locksmith near me Jacksonville",
+    ],
+    relatedServices: ["house-lockout", "rekeying-service", "lock-installation", "emergency-locksmith"],
+    relatedPosts: ["should-you-rekey-or-replace-locks", "how-much-does-rekeying-cost", "best-smart-locks-for-florida-homes"],
+    faq: [
+      {
+        q: "What residential locksmith services do you offer in Jacksonville?",
+        a: "Jax Lock Key & Safe Service provides a full range of residential locksmith services including home lockouts, lock rekeying, deadbolt and smart lock installation, broken key extraction, and 24/7 emergency response for houses, apartments, condos, and townhomes throughout Jacksonville, FL.",
+      },
+      {
+        q: "How fast can a residential locksmith arrive at my Jacksonville home?",
+        a: "Our mobile locksmiths typically arrive within 20–30 minutes for home lockouts and residential emergencies throughout Jacksonville. We dispatch from the nearest available technician to minimize your wait time.",
+      },
+      {
+        q: "How much do residential locksmith services cost in Jacksonville?",
+        a: "Residential locksmith pricing depends on the service. House lockout service typically ranges from $75–$150. Rekeying a home with 2–4 locks usually costs $80–$160 including new keys. Lock installation varies by hardware. Call (904) 586-2816 for a fast, accurate quote.",
+      },
+      {
+        q: "Should I rekey or replace my locks when moving into a new Jacksonville home?",
+        a: "Rekeying is almost always the right choice when moving into a new home in Jacksonville. It costs significantly less than full lock replacement, voids all previous keys, and uses your existing hardware. Full lock replacement makes sense only if the hardware is damaged or you want to upgrade to smart locks or high-security deadbolts.",
+      },
+      {
+        q: "Do you provide residential locksmith service 24 hours a day?",
+        a: "Yes. Jax Lock Key & Safe Service provides 24/7 residential locksmith service across Jacksonville, FL — including nights, weekends, and holidays. Emergency home lockouts are always a priority.",
+      },
+    ],
+    content: `Jax Lock Key & Safe Service is Jacksonville's trusted provider of residential locksmith services for houses, apartments, condos, and townhomes. Whether you are locked out of your home, need your locks rekeyed after a move, or want to upgrade to a smart lock, our licensed mobile locksmiths serve every Jacksonville neighborhood with fast, professional response.
+
+**Residential Locksmith Services We Provide**
+
+Our full range of Jacksonville residential locksmith services covers every home security need:
+
+- Home and apartment lockout service (24/7)
+- Lock rekeying after moving or losing keys
+- Deadbolt installation and upgrade
+- Smart lock installation (Schlage, August, Kwikset Halo)
+- Broken key extraction from door locks
+- Master key systems for multi-unit residential properties
+- Mailbox lock replacement
+- Sliding door and patio door lock service
+
+**Why Jacksonville Homeowners Choose Jax Lock Key**
+
+When you need residential locksmith services in Jacksonville, FL, licensing and response time matter most. Our technicians are licensed, background-checked, and insured. We carry professional-grade tools on every mobile unit so most residential jobs are resolved on the first visit.
+
+Most home lockout calls receive a 20–30 minute arrival across Jacksonville neighborhoods including Riverside, San Marco, Southside, Arlington, Mandarin, and Downtown.
+
+**Moving Into a New Jacksonville Home?**
+
+New homeowners in Jacksonville should always rekey or replace their locks — you never know how many copies of the previous key exist. Our residential rekeying service typically takes under an hour for a full home and costs far less than full lock replacement.
+
+**Home Security Upgrades**
+
+Beyond lockouts and rekeying, we help Jacksonville homeowners upgrade their residential security. We recommend and install ANSI Grade 1 deadbolts, high-security Medeco and Mul-T-Lock hardware, and smart locks rated for Florida's heat and humidity.
+
+**Service Areas for Residential Locksmith in Jacksonville**
+
+We provide residential locksmith services throughout Duval County and surrounding areas including Downtown Jacksonville, San Marco, Riverside, Southside, Arlington, Mandarin, Neptune Beach, and Orange Park. Same fast 20–30 minute response wherever you live in the greater Jacksonville area.`,
+  },
+  {
     slug: "emergency-locksmith",
     title: "Emergency Locksmith",
     heading: "24 Hour Emergency Locksmith in Jacksonville",
@@ -58,7 +128,7 @@ We do not drill or damage your vehicle unless absolutely necessary. Our goal is 
     description:
       "Jax Lock Key & Safe Service provides fast house lockout service in Jacksonville, FL. Licensed locksmiths open your door without damage.",
     keywords: ["house lockout Jacksonville", "home lockout", "residential locksmith Jacksonville"],
-    relatedServices: ["emergency-locksmith", "rekeying-service", "lock-installation"],
+    relatedServices: ["residential-locksmith", "emergency-locksmith", "rekeying-service", "lock-installation"],
     relatedPosts: ["should-you-rekey-or-replace-locks", "how-fast-can-emergency-locksmiths-arrive"],
     content: `Getting locked out of your home can happen to anyone. Whether you lost your keys, broke a key off in the lock, or your lock is malfunctioning, Jax Lock Key & Safe Service is ready to help.
 
@@ -80,7 +150,7 @@ We respond quickly across all Jacksonville neighborhoods including San Marco, Ri
     description:
       "Rekey your home or business locks in Jacksonville without replacing the hardware. Affordable mobile rekeying service available 24/7.",
     keywords: ["rekey locks Jacksonville", "rekeying service", "change locks Jacksonville"],
-    relatedServices: ["house-lockout", "lock-installation", "commercial-locksmith"],
+    relatedServices: ["residential-locksmith", "house-lockout", "lock-installation", "commercial-locksmith"],
     relatedPosts: ["how-much-does-rekeying-cost", "should-you-rekey-or-replace-locks"],
     content: `Rekeying is one of the most cost-effective ways to improve your home security in Jacksonville. When you rekey a lock, a locksmith changes the internal pin configuration so that old keys no longer work — only new keys do.
 
@@ -180,7 +250,7 @@ We service most domestic and import vehicle brands. Call us with your vehicle ye
     description:
       "Upgrade or replace your home or business locks in Jacksonville. Jax Lock Key & Safe Service installs deadbolts, smart locks, and high-security hardware.",
     keywords: ["lock installation Jacksonville", "deadbolt installation", "smart lock installation"],
-    relatedServices: ["rekeying-service", "commercial-locksmith", "house-lockout"],
+    relatedServices: ["residential-locksmith", "rekeying-service", "commercial-locksmith", "house-lockout"],
     relatedPosts: ["should-you-rekey-or-replace-locks", "best-smart-locks-for-florida-homes"],
     content: `Whether you want to upgrade your home security with better locks or replace worn or damaged hardware, Jax Lock Key & Safe Service provides professional lock installation throughout Jacksonville.
 

@@ -1,7 +1,13 @@
 import Link from "next/link"
-import { Car, Home, Building, Key, Shield, Lock, Smartphone, KeyRound } from "lucide-react"
+import { Car, Home, Building, Key, Shield, Lock, Smartphone, KeyRound, Layers } from "lucide-react"
 
 const serviceCards = [
+  {
+    slug: "residential-locksmith",
+    icon: Layers,
+    title: "Residential Locksmith",
+    description: "Complete residential locksmith services — lockouts, rekeying, deadbolts, and smart locks for Jacksonville homes.",
+  },
   {
     slug: "emergency-locksmith",
     icon: Shield,

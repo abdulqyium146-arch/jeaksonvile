@@ -1,3 +1,8 @@
+export interface ServiceFAQ {
+  q: string
+  a: string
+}
+
 export interface Service {
   slug: string
   title: string
@@ -8,6 +13,7 @@ export interface Service {
   keywords?: string[]
   relatedServices?: string[]
   relatedPosts?: string[]
+  faq?: ServiceFAQ[]
 }
 
 export interface Location {

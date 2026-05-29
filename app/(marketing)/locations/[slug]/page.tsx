@@ -141,6 +141,10 @@ export default async function LocationPage({
                   <Link href="/services/lock-installation" className="text-yellow-400 hover:underline font-medium">
                     new deadbolt installed
                   </Link>
+                  ,{" "}
+                  <Link href="/services/residential-locksmith" className="text-yellow-400 hover:underline font-medium">
+                    residential locksmith services
+                  </Link>
                   , or{" "}
                   <Link href="/services/commercial-locksmith" className="text-yellow-400 hover:underline font-medium">
                     commercial locksmith services

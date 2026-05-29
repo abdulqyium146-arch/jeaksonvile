@@ -137,6 +137,47 @@ export default async function ServicePage({
           />
         )}
 
+        {/* ── FAQ section (FAQPage schema + UI accordion) ── */}
+        {service.faq && service.faq.length > 0 && (
+          <>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: service.faq.map((item) => ({
+                    "@type": "Question",
+                    name: item.q,
+                    acceptedAnswer: { "@type": "Answer", text: item.a },
+                  })),
+                }),
+              }}
+            />
+            <section className="py-16 bg-zinc-950 border-t border-white/10" aria-labelledby="faq-heading">
+              <div className="container mx-auto px-4 max-w-3xl">
+                <h2 id="faq-heading" className="text-3xl font-black text-white mb-8">
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-3">
+                  {service.faq.map((item, i) => (
+                    <details
+                      key={i}
+                      className="group rounded-2xl border border-white/10 bg-zinc-900 open:border-yellow-400/30"
+                    >
+                      <summary className="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 text-white font-semibold list-none select-none">
+                        <span>{item.q}</span>
+                        <span className="shrink-0 text-yellow-400 text-xl leading-none group-open:rotate-45 transition-transform duration-200">+</span>
+                      </summary>
+                      <p className="px-6 pb-5 text-zinc-300 leading-relaxed">{item.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </>
+        )}
+
         <EmergencyCTA />
       </div>
     </main>
