@@ -7,7 +7,9 @@ import {
   buildBlogPostingSchema,
   buildFAQSchema,
   buildItemListSchema,
+  buildHowToSchema,
 } from "@/lib/schema"
+import type { ServiceHowTo } from "@/types"
 import { faqs } from "@/content/faqs"
 
 function JsonLd({ data }: { data: object | object[] }) {
@@ -141,6 +143,21 @@ export function AboutPageSchema() {
         description:
           "Learn about Jax Lock Key & Safe Service, Jacksonville's trusted 24/7 mobile locksmith. Licensed, insured, and locally owned.",
         path: "/about",
+      })}
+    />
+  )
+}
+
+// ─── HowTo schema ─────────────────────────────────────────────────────────────
+export function HowToSchema({ howTo, slug }: { howTo: ServiceHowTo; slug: string }) {
+  return (
+    <JsonLd
+      data={buildHowToSchema({
+        name: howTo.name,
+        description: howTo.description,
+        slug,
+        steps: howTo.steps,
+        totalTime: howTo.totalTime,
       })}
     />
   )

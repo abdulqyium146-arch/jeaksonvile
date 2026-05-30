@@ -127,6 +127,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* LLM crawler discovery — llms.txt standard */}
+        <link rel="llms" href="/llms.txt" type="text/plain" />
       </head>
       <body className="font-sans bg-black text-white min-h-full flex flex-col">
         <EmergencyRibbon />

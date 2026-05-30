@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
+import RelatedServicesStrip from "@/components/internal/related-services-strip"
+import LocationLinks from "@/components/internal/location-links"
 import { blogPosts } from "@/content/blog"
 import { buildMetadata } from "@/lib/metadata"
 import { SITE_URL } from "@/lib/constants"
@@ -49,6 +51,7 @@ export default function BlogPage() {
 
       <div className="bg-black text-white min-h-screen">
         <section className="container mx-auto px-4 py-24 max-w-4xl">
+
           <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
 
           <header className="mb-12">
@@ -101,6 +104,16 @@ export default function BlogPage() {
             ))}
           </div>
         </section>
+
+        <RelatedServicesStrip
+          heading="Jacksonville Locksmith Services"
+          slugs={["residential-locksmith","emergency-locksmith","car-lockout","house-lockout","rekeying-service","lock-installation","safe-locksmith","commercial-locksmith","key-fob-programming"]}
+        />
+
+        <LocationLinks
+          heading="Serving Every Jacksonville Neighborhood"
+          subheading="Mobile locksmith dispatch across all of Jacksonville and Duval County."
+        />
       </div>
     </main>
   )

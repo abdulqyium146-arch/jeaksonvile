@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import ServiceCard from "@/components/cards/service-card"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
+import LocationLinks from "@/components/internal/location-links"
+import ServiceLocationMatrix from "@/components/internal/service-location-matrix"
 import { ServicesListSchema } from "@/components/seo/schema"
 import { services } from "@/content/services"
 import { buildMetadata } from "@/lib/metadata"
@@ -50,6 +52,13 @@ export default function ServicesPage() {
             ))}
           </div>
         </section>
+
+        <LocationLinks
+          heading="We Cover Every Jacksonville Neighborhood"
+          subheading="Our mobile locksmiths serve all Jacksonville service areas — same fast response wherever you are."
+        />
+
+        <ServiceLocationMatrix heading="All Locksmith Services — By Jacksonville Neighborhood" />
 
         <EmergencyCTA />
       </div>

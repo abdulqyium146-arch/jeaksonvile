@@ -7,10 +7,11 @@ import QuoteForm from "@/components/forms/quote-form"
 import LocationLinks from "@/components/internal/location-links"
 import RelatedServicesStrip from "@/components/internal/related-services-strip"
 import RelatedPostsStrip from "@/components/internal/related-posts-strip"
-import { ServicePageSchema } from "@/components/seo/schema"
+import { ServicePageSchema, HowToSchema } from "@/components/seo/schema"
 import { services } from "@/content/services"
 import { buildMetadata } from "@/lib/metadata"
 import { PHONE_HREF, SITE_NAME } from "@/lib/constants"
+import { parseInline } from "@/lib/parse-inline"
 
 export const revalidate = 86400
 
@@ -54,6 +55,7 @@ export default async function ServicePage({
         slug={slug}
         path={`/services/${slug}`}
       />
+      {service.howTo && <HowToSchema howTo={service.howTo} slug={slug} />}
 
       <div className="bg-black text-white min-h-screen">
         <section className="container mx-auto px-4 py-24 max-w-5xl">
@@ -75,6 +77,15 @@ export default async function ServicePage({
 
               <div className="text-zinc-300 space-y-4 leading-relaxed">
                 {contentParagraphs.map((para, i) => {
+                  // Standalone **heading**
+                  if (para.startsWith("**") && para.endsWith("**") && !para.slice(2, -2).includes("**")) {
+                    return (
+                      <h2 key={i} className="text-2xl font-black text-white mt-8">
+                        {para.replace(/\*\*/g, "")}
+                      </h2>
+                    )
+                  }
+                  // List block
                   if (para.startsWith("-")) {
                     const items = para.split("\n").filter((l) => l.startsWith("-"))
                     return (
@@ -82,13 +93,23 @@ export default async function ServicePage({
                         {items.map((item, j) => (
                           <li key={j} className="flex items-start gap-2">
                             <span className="text-yellow-400 mt-1 shrink-0" aria-hidden="true">•</span>
-                            <span>{item.replace(/^-\s*/, "")}</span>
+                            <span>{parseInline(item.replace(/^-\s*/, ""))}</span>
                           </li>
                         ))}
                       </ul>
                     )
                   }
-                  return <p key={i}>{para}</p>
+                  // Bold-start paragraph: **label** rest
+                  const boldMatch = para.match(/^\*\*(.*?)\*\*(.+)/)
+                  if (boldMatch) {
+                    return (
+                      <p key={i}>
+                        <strong className="text-white">{boldMatch[1]}</strong>
+                        {parseInline(boldMatch[2])}
+                      </p>
+                    )
+                  }
+                  return <p key={i}>{parseInline(para)}</p>
                 })}
               </div>
 

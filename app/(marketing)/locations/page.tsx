@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import LocationCard from "@/components/cards/location-card"
 import EmergencyCTA from "@/components/sections/emergency-cta"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
+import RelatedServicesStrip from "@/components/internal/related-services-strip"
+import ServiceLocationMatrix from "@/components/internal/service-location-matrix"
 import { LocationsListSchema } from "@/components/seo/schema"
 import { locations } from "@/content/locations"
 import { buildMetadata } from "@/lib/metadata"
@@ -50,6 +52,13 @@ export default function LocationsPage() {
             ))}
           </div>
         </section>
+
+        <RelatedServicesStrip
+          heading="Locksmith Services Available Across All Locations"
+          slugs={["residential-locksmith","emergency-locksmith","car-lockout","house-lockout","rekeying-service","lock-installation","safe-locksmith","commercial-locksmith","key-fob-programming"]}
+        />
+
+        <ServiceLocationMatrix heading="Find Your Neighborhood Service" />
 
         <EmergencyCTA />
       </div>

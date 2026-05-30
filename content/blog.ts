@@ -10,7 +10,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["car lockout", "emergency", "Jacksonville"],
     relatedServices: ["car-lockout", "emergency-locksmith", "key-fob-programming"],
     relatedPosts: ["how-fast-can-emergency-locksmiths-arrive", "can-locksmiths-program-key-fobs"],
-    content: `Being locked out of your car in Jacksonville can happen at the worst moments — in the heat, at night, or far from home. Here's what to do.
+    content: `Being [locked out of your car](/services/car-lockout) in Jacksonville can happen at the worst moments — in the heat, at night, or far from home. Here's what to do.
 
 **Step 1: Stay calm and assess your situation**
 Check all doors and the trunk before calling anyone. A rear door or window may be unlocked.
@@ -19,13 +19,13 @@ Check all doors and the trunk before calling anyone. A rear door or window may b
 Do you have a spare at home or with someone nearby who can bring it to you?
 
 **Step 3: Call a local Jacksonville locksmith**
-Jax Lock Key & Safe Service responds quickly across Jacksonville. A professional locksmith can open your vehicle without damage in most cases.
+Jax Lock Key & Safe Service responds quickly across [Downtown Jacksonville](/locations/downtown-jacksonville), [Southside](/locations/southside), and all Jacksonville neighborhoods. A professional [emergency locksmith](/services/emergency-locksmith) can open your vehicle without damage in most cases.
 
 **Step 4: Avoid DIY methods**
 Attempting to use a coat hanger or slim jim can damage your car's door and weather stripping. Leave it to the professionals.
 
 **Step 5: Know what to expect**
-A locksmith will typically arrive within 20–30 minutes in Jacksonville. They'll ask for ID and proof of ownership before opening the vehicle.`,
+A locksmith will typically arrive within 20–30 minutes in Jacksonville. They'll ask for ID and proof of ownership before opening the vehicle. If you need a replacement fob, our [key fob programming](/services/key-fob-programming) service can handle that on-site too.`,
   },
   {
     slug: "how-much-does-rekeying-cost",
@@ -36,7 +36,7 @@ A locksmith will typically arrive within 20–30 minutes in Jacksonville. They'l
     tags: ["rekeying", "cost", "home security"],
     relatedServices: ["residential-locksmith", "rekeying-service", "lock-installation", "house-lockout"],
     relatedPosts: ["should-you-rekey-or-replace-locks"],
-    content: `Rekeying is one of the most affordable ways to improve your home security in Jacksonville, FL.
+    content: `[Rekeying](/services/rekeying-service) is one of the most affordable ways to improve your home security in Jacksonville, FL.
 
 **What is rekeying?**
 Rekeying changes the internal pin configuration of your lock so that old keys no longer work. You keep your existing hardware but get new keys.
@@ -48,10 +48,10 @@ Rekeying changes the internal pin configuration of your lock so that old keys no
 - Whether new keys need to be cut
 
 **Typical rekeying prices in Jacksonville:**
-Most locksmiths charge a service call fee plus a per-lock rate. For a home with 2–4 locks, total costs often range from $80 to $160 depending on the locksmith and lock types.
+Most locksmiths charge a service call fee plus a per-lock rate. For a home with 2–4 locks, total costs often range from $80 to $160 depending on the locksmith and lock types. Our [residential locksmith](/services/residential-locksmith) team provides upfront pricing before any work begins.
 
 **Rekeying vs. replacement:**
-If your locks are in good condition, rekeying saves significant money. Lock replacement makes more sense when hardware is damaged or you want to upgrade to deadbolts or smart locks.`,
+If your locks are in good condition, rekeying saves significant money. [Lock installation](/services/lock-installation) makes more sense when hardware is damaged or you want to upgrade to deadbolts or smart locks. If you're locked out while deciding, our [house lockout](/services/house-lockout) service can get you back inside first.`,
   },
   {
     slug: "should-you-rekey-or-replace-locks",
@@ -62,7 +62,7 @@ If your locks are in good condition, rekeying saves significant money. Lock repl
     tags: ["rekeying", "lock replacement", "home security"],
     relatedServices: ["residential-locksmith", "rekeying-service", "lock-installation"],
     relatedPosts: ["how-much-does-rekeying-cost", "best-smart-locks-for-florida-homes"],
-    content: `When you move into a new home or lose your keys, you face a choice: rekey your existing locks or replace them entirely.
+    content: `When you move into a new home or lose your keys, you face a choice: [rekey your existing locks](/services/rekeying-service) or [replace them entirely](/services/lock-installation).
 
 **Choose rekeying when:**
 - Your existing locks are in good working condition
@@ -76,7 +76,7 @@ If your locks are in good condition, rekeying saves significant money. Lock repl
 - You want to install smart locks
 - The existing hardware doesn't match your door
 
-**For most Jacksonville homeowners**, rekeying is the right choice after moving or losing keys. Lock replacement is best reserved for security upgrades.`,
+**For most Jacksonville homeowners**, [residential locksmith](/services/residential-locksmith) services like rekeying are the right choice after moving or losing keys. Lock replacement is best reserved for security upgrades or adding [smart lock installation](/services/lock-installation) to your home.`,
   },
   {
     slug: "can-locksmiths-program-key-fobs",
@@ -87,7 +87,7 @@ If your locks are in good condition, rekeying saves significant money. Lock repl
     tags: ["key fob", "car key", "programming"],
     relatedServices: ["key-fob-programming", "car-lockout", "emergency-locksmith"],
     relatedPosts: ["what-to-do-when-locked-out-of-car-jacksonville", "how-fast-can-emergency-locksmiths-arrive"],
-    content: `Losing a key fob can feel expensive — dealerships often charge $200–$400 or more for replacement and programming. But a mobile locksmith can typically do the same job for significantly less.
+    content: `Losing a key fob can feel expensive — dealerships often charge $200–$400 or more for replacement and programming. But a mobile [key fob programming](/services/key-fob-programming) locksmith can typically do the same job for significantly less.
 
 **What key fob programming involves:**
 The locksmith uses specialized equipment to pair a new fob to your vehicle's onboard computer. The process varies by make and model.
@@ -101,7 +101,7 @@ Most locksmiths can program key fobs for the majority of domestic and import veh
 - Faster turnaround
 - No towing required
 
-Call Jax Lock Key & Safe Service with your vehicle year, make, and model for a quote.`,
+If you're currently locked out, our [car lockout](/services/car-lockout) service gets you back in first — and we can handle [key fob programming](/services/key-fob-programming) at the same visit. Call Jax Lock Key & Safe Service with your vehicle year, make, and model for a quote.`,
   },
   {
     slug: "best-smart-locks-for-florida-homes",
@@ -131,7 +131,7 @@ Installs on your existing deadbolt interior, which protects the smart components
 - Reliable WiFi or Z-Wave connectivity
 - ANSI Grade 1 or 2 security rating
 
-Jax Lock Key & Safe Service can recommend and install smart locks throughout Jacksonville.`,
+Our [residential locksmith](/services/residential-locksmith) team can recommend the right model for your home. We offer professional [lock installation](/services/lock-installation) throughout [Downtown Jacksonville](/locations/downtown-jacksonville), [San Marco](/locations/san-marco), [Mandarin](/locations/mandarin), and all surrounding neighborhoods. Commercial properties can also benefit from smart access — see our [commercial locksmith](/services/commercial-locksmith) services.`,
   },
   {
     slug: "how-fast-can-emergency-locksmiths-arrive",
@@ -142,19 +142,19 @@ Jax Lock Key & Safe Service can recommend and install smart locks throughout Jac
     tags: ["emergency", "response time", "Jacksonville"],
     relatedServices: ["emergency-locksmith", "car-lockout", "house-lockout"],
     relatedPosts: ["what-to-do-when-locked-out-of-car-jacksonville"],
-    content: `When you're locked out, every minute counts. Here's a realistic look at emergency locksmith response times in Jacksonville.
+    content: `When you're locked out, every minute counts. Here's a realistic look at [emergency locksmith](/services/emergency-locksmith) response times in Jacksonville.
 
 **Typical response time:**
 Most established Jacksonville locksmiths can arrive within 20–30 minutes for emergencies, though traffic and distance from the locksmith's nearest technician affect this.
 
 **Factors that affect response time:**
-- Your location within Jacksonville (Downtown is faster than Neptune Beach, for example)
+- Your location within Jacksonville ([Downtown Jacksonville](/locations/downtown-jacksonville) is faster than [Neptune Beach](/locations/neptune-beach), for example)
 - Time of day (rush hour slows response)
 - Number of active calls the company has
 - Whether the company has multiple service vans
 
 **What Jax Lock Key & Safe Service offers:**
-We dispatch the nearest available technician for emergency calls. Our goal is a 20–30 minute arrival window across core Jacksonville service areas.
+We dispatch the nearest available technician for [car lockout](/services/car-lockout), [house lockout](/services/house-lockout), and all emergency calls. Our goal is a 20–30 minute arrival window across [Southside](/locations/southside), [Arlington](/locations/arlington), [Mandarin](/locations/mandarin), and all core Jacksonville service areas.
 
 **Tips to speed things up:**
 - Call rather than texting or messaging online

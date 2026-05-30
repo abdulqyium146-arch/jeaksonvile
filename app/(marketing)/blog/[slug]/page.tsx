@@ -10,6 +10,7 @@ import { BlogPostSchema } from "@/components/seo/schema"
 import { blogPosts } from "@/content/blog"
 import { buildMetadata } from "@/lib/metadata"
 import { SITE_NAME } from "@/lib/constants"
+import { parseInline } from "@/lib/parse-inline"
 
 export const revalidate = 604800
 
@@ -97,7 +98,7 @@ export default async function BlogPostPage({
 
           <div className="text-zinc-300 space-y-5 leading-relaxed">
             {sections.map((section, i) => {
-              if (section.startsWith("**") && section.endsWith("**")) {
+              if (section.startsWith("**") && section.endsWith("**") && !section.slice(2, -2).includes("**")) {
                 return (
                   <h2 key={i} className="text-2xl font-black text-white mt-8">
                     {section.replace(/\*\*/g, "")}
@@ -114,11 +115,11 @@ export default async function BlogPostPage({
                         return (
                           <p key={j}>
                             <strong className="text-white">{boldMatch[1]}</strong>
-                            {boldMatch[2]}
+                            {parseInline(boldMatch[2])}
                           </p>
                         )
                       }
-                      return <p key={j}>{line}</p>
+                      return <p key={j}>{parseInline(line)}</p>
                     })}
                   </div>
                 )
@@ -128,11 +129,11 @@ export default async function BlogPostPage({
                 return (
                   <p key={i}>
                     <strong className="text-white">{boldMatch[1]}</strong>
-                    {boldMatch[2]}
+                    {parseInline(boldMatch[2])}
                   </p>
                 )
               }
-              return <p key={i}>{section}</p>
+              return <p key={i}>{parseInline(section)}</p>
             })}
           </div>
 

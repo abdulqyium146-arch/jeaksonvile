@@ -3,6 +3,18 @@ export interface ServiceFAQ {
   a: string
 }
 
+export interface ServiceHowToStep {
+  name: string
+  text: string
+}
+
+export interface ServiceHowTo {
+  name: string
+  description: string
+  totalTime?: string
+  steps: ServiceHowToStep[]
+}
+
 export interface Service {
   slug: string
   title: string
@@ -14,6 +26,7 @@ export interface Service {
   relatedServices?: string[]
   relatedPosts?: string[]
   faq?: ServiceFAQ[]
+  howTo?: ServiceHowTo
 }
 
 export interface Location {
