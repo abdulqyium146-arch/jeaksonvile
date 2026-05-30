@@ -30,7 +30,7 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `Locksmith in ${location.name} FL | ${SITE_NAME}`,
-    description: `${location.description} Licensed 24/7 mobile locksmith serving ${location.name}. Call (904) 586-2816 for fast emergency response.`,
+    description: `${location.description} Licensed 24/7 mobile locksmith serving ${location.name}. Call (855) 633-0750 for fast emergency response.`,
     path: `/locations/${slug}`,
     keywords: [
       `locksmith ${location.name}`,

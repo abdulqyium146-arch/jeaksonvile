@@ -13,7 +13,7 @@ import { SITE_URL, SITE_NAME, OG_IMAGE } from "@/lib/constants"
 export const metadata: Metadata = {
   title: "24/7 Emergency Locksmith Jacksonville FL | Jax Lock Key & Safe Service",
   description:
-    "Fast mobile locksmith in Jacksonville, FL — car lockouts, house lockouts, rekeying, safes & key fob programming. Licensed & insured. 20–30 min response. Call (904) 586-2816.",
+    "Fast mobile locksmith in Jacksonville, FL — car lockouts, house lockouts, rekeying, safes & key fob programming. Licensed & insured. 20–30 min response. Call (855) 633-0750.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: "24/7 Emergency Locksmith Jacksonville FL | Jax Lock Key & Safe Service",

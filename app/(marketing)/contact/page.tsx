@@ -10,7 +10,7 @@ import { PHONE, PHONE_HREF, EMAIL, SITE_NAME } from "@/lib/constants"
 export const metadata: Metadata = buildMetadata({
   title: `Contact ${SITE_NAME} — 24/7 Jacksonville Locksmith`,
   description:
-    "Contact Jax Lock Key & Safe Service for emergency locksmith service in Jacksonville, FL. Available 24/7 — call (904) 586-2816 or send a message anytime.",
+    "Contact Jax Lock Key & Safe Service for emergency locksmith service in Jacksonville, FL. Available 24/7 — call (855) 633-0750 or send a message anytime.",
   path: "/contact",
   keywords: ["contact Jacksonville locksmith", "locksmith phone number Jacksonville", "call locksmith Jacksonville"],
 })

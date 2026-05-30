@@ -1,9 +1,9 @@
 export const SITE_NAME = "Jax Lock Key & Safe Service"
 export const SITE_URL = "https://jaxlockkeyandsafeservices.com"
 
-export const PHONE = "(904) 586-2816"
-export const PHONE_HREF = "tel:+19045862816"
-export const PHONE_INTERNATIONAL = "+1-904-586-2816"
+export const PHONE = "(855) 633-0750"
+export const PHONE_HREF = "tel:+18556330750"
+export const PHONE_INTERNATIONAL = "+1-855-633-0750"
 
 export const EMAIL = "info@jaxlockkeyandsafeservices.com"
 

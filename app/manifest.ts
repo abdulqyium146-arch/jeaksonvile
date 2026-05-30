@@ -50,7 +50,7 @@ export default function manifest(): MetadataRoute.Manifest {
     shortcuts: [
       {
         name: "Call Now",
-        url: "tel:+19045862816",
+        url: "tel:+18556330750",
         description: "Call Jax Lock Key & Safe Service immediately",
       },
       {

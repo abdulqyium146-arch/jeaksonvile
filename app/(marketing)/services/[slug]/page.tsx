@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   return buildMetadata({
     title: `${service.title} Jacksonville FL | ${SITE_NAME}`,
-    description: `${service.description} Licensed mobile locksmith serving all of Jacksonville. Call (904) 586-2816 for fast 24/7 service.`,
+    description: `${service.description} Licensed mobile locksmith serving all of Jacksonville. Call (855) 633-0750 for fast 24/7 service.`,
     path: `/services/${slug}`,
     keywords: service.keywords,
   })

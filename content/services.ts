@@ -27,7 +27,7 @@ export const services: Service[] = [
       },
       {
         q: "How much do residential locksmith services cost in Jacksonville?",
-        a: "Residential locksmith pricing depends on the service. House lockout service typically ranges from $75–$150. Rekeying a home with 2–4 locks usually costs $80–$160 including new keys. Lock installation varies by hardware. Call (904) 586-2816 for a fast, accurate quote.",
+        a: "Residential locksmith pricing depends on the service. House lockout service typically ranges from $75–$150. Rekeying a home with 2–4 locks usually costs $80–$160 including new keys. Lock installation varies by hardware. Call (855) 633-0750 for a fast, accurate quote.",
       },
       {
         q: "Should I rekey or replace my locks when moving into a new Jacksonville home?",

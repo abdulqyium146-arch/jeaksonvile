@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/constants"
 export const metadata: Metadata = buildMetadata({
   title: "Locksmith Services Jacksonville FL — Emergency, Residential & Commercial",
   description:
-    "Complete locksmith services in Jacksonville, FL: emergency lockouts, car lockouts, rekeying, safe opening, key fob programming, commercial locks. Available 24/7. Call (904) 586-2816.",
+    "Complete locksmith services in Jacksonville, FL: emergency lockouts, car lockouts, rekeying, safe opening, key fob programming, commercial locks. Available 24/7. Call (855) 633-0750.",
   path: "/services",
   keywords: [
     "locksmith services Jacksonville",
