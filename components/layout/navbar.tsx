@@ -24,6 +24,7 @@ const locationDropdown = [
   { href: "/locations/southside", label: "Southside" },
   { href: "/locations/mandarin", label: "Mandarin" },
   { href: "/locations/neptune-beach", label: "Neptune Beach" },
+  { href: "/locations/jacksonville-beach", label: "Jacksonville Beach" },
   { href: "/locations/orange-park", label: "Orange Park" },
 ]
 

@@ -44,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.75,
     },
+    {
+      url: `${SITE_URL}/affordable-locksmith-jacksonville`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.88,
+    },
   ]
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((s) => ({

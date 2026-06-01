@@ -10,6 +10,7 @@ const areas = [
   { label: "Riverside", href: "/locations/riverside" },
   { label: "Mandarin", href: "/locations/mandarin" },
   { label: "Neptune Beach", href: "/locations/neptune-beach" },
+  { label: "Jacksonville Beach", href: "/locations/jacksonville-beach" },
   { label: "Orange Park", href: "/locations/orange-park" },
   { label: "Avondale", href: "/locations/riverside" },
   { label: "Baymeadows", href: "/locations/southside" },

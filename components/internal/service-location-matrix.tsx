@@ -20,6 +20,7 @@ const locations = [
   { label: "Southside", href: "/locations/southside" },
   { label: "Mandarin", href: "/locations/mandarin" },
   { label: "Neptune Beach", href: "/locations/neptune-beach" },
+  { label: "Jacksonville Beach", href: "/locations/jacksonville-beach" },
   { label: "Orange Park", href: "/locations/orange-park" },
 ]
 

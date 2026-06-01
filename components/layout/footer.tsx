@@ -23,6 +23,7 @@ const locationLinks = [
   { href: "/locations/southside", label: "Southside" },
   { href: "/locations/mandarin", label: "Mandarin" },
   { href: "/locations/neptune-beach", label: "Neptune Beach" },
+  { href: "/locations/jacksonville-beach", label: "Jacksonville Beach" },
   { href: "/locations/orange-park", label: "Orange Park" },
 ]
 
@@ -134,6 +135,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5 text-sm">
               <li><Link href="/about" className="hover:text-yellow-400 transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
+              <li><Link href="/affordable-locksmith-jacksonville" className="hover:text-yellow-400 transition-colors">Affordable Pricing</Link></li>
               <li><Link href="/services" className="hover:text-yellow-400 transition-colors">All Services</Link></li>
               <li><Link href="/locations" className="hover:text-yellow-400 transition-colors">All Locations</Link></li>
             </ul>

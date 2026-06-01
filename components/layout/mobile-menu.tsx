@@ -34,6 +34,7 @@ const locationLinks = [
   { href: "/locations/southside", label: "Southside" },
   { href: "/locations/mandarin", label: "Mandarin" },
   { href: "/locations/neptune-beach", label: "Neptune Beach" },
+  { href: "/locations/jacksonville-beach", label: "Jax Beach" },
   { href: "/locations/orange-park", label: "Orange Park" },
 ]
 
