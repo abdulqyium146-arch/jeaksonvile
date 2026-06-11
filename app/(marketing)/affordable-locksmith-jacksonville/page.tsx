@@ -234,6 +234,23 @@ export default function AffordableLocksmithPage() {
           subheading="Same upfront pricing throughout Jacksonville, the Beaches, and surrounding areas."
         />
 
+        {/* Florida locksmith partner — contextual do-follow cross-link */}
+        <section className="py-12 bg-zinc-950 border-t border-white/5">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <p className="text-zinc-500 text-xs uppercase tracking-wider mb-3 font-semibold">Also Need a Locksmith in Orlando?</p>
+            <p className="text-zinc-400 text-sm mb-4 max-w-lg mx-auto">
+              Our partner serves the Greater Orlando metro area with the same 24/7 response, licensed technicians, and upfront pricing.
+            </p>
+            <a
+              href="https://affordablelocksmithorlando.com"
+              className="inline-flex items-center gap-2 text-yellow-400 hover:underline font-semibold text-sm"
+              rel="noopener"
+            >
+              Affordable Locksmith Orlando →
+            </a>
+          </div>
+        </section>
+
         <EmergencyCTA />
       </div>
     </main>
