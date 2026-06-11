@@ -51,7 +51,7 @@ Rekeying changes the internal pin configuration of your lock so that old keys no
 Most locksmiths charge a service call fee plus a per-lock rate. For a home with 2–4 locks, total costs often range from $80 to $160 depending on the locksmith and lock types. Our [residential locksmith](/services/residential-locksmith) team provides upfront pricing before any work begins.
 
 **Rekeying vs. replacement:**
-If your locks are in good condition, rekeying saves significant money. [Lock installation](/services/lock-installation) makes more sense when hardware is damaged or you want to upgrade to deadbolts or smart locks. If you're locked out while deciding, our [house lockout](/services/house-lockout) service can get you back inside first.`,
+If your locks are in good condition, rekeying saves significant money. [Lock installation](/services/lock-installation) makes more sense when hardware is damaged or you want to upgrade to deadbolts or smart locks. If you're locked out while deciding, our [house lockout](/services/house-lockout) service can get you back inside first. Rekeying prices in Orlando are similar — see [Affordable Locksmith Orlando](https://affordablelocksmithorlando.com) for Central Florida service.`,
   },
   {
     slug: "should-you-rekey-or-replace-locks",
@@ -154,7 +154,7 @@ Most established Jacksonville locksmiths can arrive within 20–30 minutes for e
 - Whether the company has multiple service vans
 
 **What Jax Lock Key & Safe Service offers:**
-We dispatch the nearest available technician for [car lockout](/services/car-lockout), [house lockout](/services/house-lockout), and all emergency calls. Our goal is a 20–30 minute arrival window across [Southside](/locations/southside), [Arlington](/locations/arlington), [Mandarin](/locations/mandarin), and all core Jacksonville service areas.
+We dispatch the nearest available technician for [car lockout](/services/car-lockout), [house lockout](/services/house-lockout), and all emergency calls. Our goal is a 20–30 minute arrival window across [Southside](/locations/southside), [Arlington](/locations/arlington), [Mandarin](/locations/mandarin), and all core Jacksonville service areas. In the Orlando metro, our partner [affordablelocksmithorlando.com](https://affordablelocksmithorlando.com) operates the same fast-response model across Greater Orlando.
 
 **Tips to speed things up:**
 - Call rather than texting or messaging online

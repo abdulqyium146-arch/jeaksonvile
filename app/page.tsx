@@ -38,6 +38,24 @@ export default function HomePage() {
       <CoverageSection />
       <ReviewSlider />
       <FAQSection />
+
+      {/* Florida partner network — do-follow link to Orlando site */}
+      <section className="py-8 bg-zinc-950 border-t border-white/5">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <p className="text-zinc-500 text-sm">
+            Need a locksmith in Central Florida?{" "}
+            <a
+              href="https://affordablelocksmithorlando.com"
+              rel="noopener"
+              className="text-yellow-400 hover:underline font-medium"
+            >
+              Affordable Locksmith Orlando
+            </a>{" "}
+            — licensed 24/7 locksmith serving Greater Orlando, FL.
+          </p>
+        </div>
+      </section>
+
       <EmergencyCTA />
     </main>
   )

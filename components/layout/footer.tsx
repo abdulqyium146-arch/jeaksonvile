@@ -138,6 +138,11 @@ export default function Footer() {
               <li><Link href="/affordable-locksmith-jacksonville" className="hover:text-yellow-400 transition-colors">Affordable Pricing</Link></li>
               <li><Link href="/services" className="hover:text-yellow-400 transition-colors">All Services</Link></li>
               <li><Link href="/locations" className="hover:text-yellow-400 transition-colors">All Locations</Link></li>
+              <li>
+                <a href="https://affordablelocksmithorlando.com" rel="noopener" className="hover:text-yellow-400 transition-colors">
+                  Locksmith Orlando, FL
+                </a>
+              </li>
             </ul>
           </div>
         </div>

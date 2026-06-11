@@ -268,6 +268,22 @@ export default function AboutPage() {
             </a>
           </div>
 
+          {/* Florida partner — contextual do-follow link */}
+          <div className="mt-10 rounded-2xl border border-white/10 bg-zinc-900 p-5">
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              <span className="text-white font-semibold">Also serving Central Florida.</span>{" "}
+              Our partner company{" "}
+              <a
+                href="https://affordablelocksmithorlando.com"
+                rel="noopener"
+                className="text-yellow-400 hover:underline font-medium"
+              >
+                Affordable Locksmith Orlando
+              </a>{" "}
+              provides the same licensed, 24/7 mobile locksmith service across Greater Orlando — car lockouts, rekeying, key fob programming, and more.
+            </p>
+          </div>
+
           {/* Internal links to services */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <h2 className="text-2xl font-black text-white mb-6">Our Locksmith Services</h2>
